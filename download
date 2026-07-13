@@ -1,0 +1,6 @@
+// Reserved for the v0.3 search engine.
+export function searchEntries(entries,query){
+  const q=query.trim().toLowerCase();
+  if(!q)return entries;
+  return entries.filter(entry=>JSON.stringify(entry).toLowerCase().includes(q));
+}
